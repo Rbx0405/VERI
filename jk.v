@@ -1,11 +1,10 @@
-Module jk (
-  input j,
-  input k,
-  input clk,
-  output q
-);
-  reg q = 0;
-  always @(negedge clk)
+Module jk (j,k,clk,q);
+input j,
+input k,
+input clk,
+output q;
+reg q = 0;
+always @(negedge clk)
     case ({j, k})
     0:q=q;
     1:q=0;
